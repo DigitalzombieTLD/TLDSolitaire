@@ -21,7 +21,8 @@ namespace CardGame
                 {                                  
                     Vars.currentGameObject = __instance.m_InteractiveObjectUnderCrosshair;
 
-					Vars.currentGame = InitBoard.Init(Vars.currentGameObject);
+					Vars.currentGame = InitBoard.Init(Vars.currentGameObject);					
+					
 					Actions.EnterGameView(Vars.currentGame);
 					
 					return false;

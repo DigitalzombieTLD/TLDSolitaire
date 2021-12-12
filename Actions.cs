@@ -11,6 +11,7 @@ using UnhollowerRuntimeLib;
 using System.Collections.Generic;
 using System.Collections;
 using DigitalRuby.Tween;
+using ModComponent.Utils;
 
 namespace CardGame
 {
@@ -45,7 +46,9 @@ namespace CardGame
 
 		public static IEnumerator explode(CardGame cardGame)
 		{
-			if(cardGame)
+			AudioMain.playClip("whoosh");
+
+			if (cardGame)
 			{
 				for (int cardToExplode = 0; cardToExplode < 52; cardToExplode++)
 				{
@@ -61,6 +64,7 @@ namespace CardGame
 					cardGame.playingCards[cardToExplode].cardObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(UnityEngine.Random.Range(-0.03f, 0.03f), UnityEngine.Random.Range(-0.01f, 0.09f), UnityEngine.Random.Range(0.00f, 0.03f)), ForceMode.Impulse);
 					cardGame.playingCards[cardToExplode].cardObject.GetComponent<Rigidbody>().AddTorque(new Vector3(UnityEngine.Random.Range(-5f, 5f), UnityEngine.Random.Range(-5f, 5f), UnityEngine.Random.Range(-5f, 5f)), ForceMode.Impulse);
 					cardGame.playingCards[cardToExplode].cardObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+					
 				}
 			}	
 
@@ -81,6 +85,9 @@ namespace CardGame
 			m_StartAngleY = GameManager.GetVpFPSPlayer().transform.rotation.eulerAngles.y;
 			m_StartBoardLayer = cardGame.gameObject.layer;
             cardGame.gameObject.layer = 14; // 5
+
+			AudioMain.init();
+			AudioMain.cardSource = ComponentUtils.GetOrCreateComponent<AudioSource>(cardGame.gameObject);
 
 			GameManager.GetPlayerManagerComponent().SetControlMode(PlayerControlMode.InSnowShelter);
             GameManager.GetPlayerManagerComponent().TeleportPlayer(cardGame.dummyCamera.transform.position - GameManager.GetVpFPSCamera().PositionOffset, cardGame.dummyCamera.transform.rotation);
@@ -148,6 +155,8 @@ namespace CardGame
 
 		public static IEnumerator pickUpCard(PlayingCard playingCard, float speed)
 		{
+			AudioMain.playClip("cardslide7");
+
 			Vars.cardInHand = playingCard;			
             playingCard.cardObject.transform.parent = GameManager.m_vpFPSCamera.transform;
 
@@ -194,6 +203,8 @@ namespace CardGame
 
 		public static IEnumerator pickUpGroup(CardGame cardGame, PlayingCard playingCard, float speed)
 		{
+			AudioMain.playClip("cardslide7");
+
 			Vars.cardInHand = playingCard;
 			Vars.cardListInHand = new PlayingCard[52];
 			Vars.cardListCounter = 0;
@@ -256,6 +267,7 @@ namespace CardGame
 		public static IEnumerator drawCardFromStack(CardGame cardGame, float waitTime, float speed, bool reverse)
         {
             yield return new WaitForSeconds(waitTime);
+			AudioMain.playClip("cardslide4");
 
 			int targetCol = 1;
 			int originCol = 0;

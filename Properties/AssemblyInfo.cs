@@ -7,10 +7,10 @@ using CardGame;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: MelonInfo(typeof(CardGameMain), "CardGame", "0.1.0", "Digitalzombie", "")]
+[assembly: MelonInfo(typeof(CardGameMain), "TLD Solitaire", "0.8.0", "Digitalzombie", "")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
 [assembly: AssemblyTitle("CardGame")]
-[assembly: AssemblyDescription("Play Solitaire")]
+[assembly: AssemblyDescription("Waste your time in style; play Solitaire")]
 [assembly: AssemblyCompany("Digitalzombie")]
 [assembly: AssemblyProduct("CardGame")]
 

@@ -73,6 +73,12 @@
       <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\MelonLoader\Managed\UnhollowerRuntimeLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\MelonLoader\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\MelonLoader\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
@@ -89,6 +95,7 @@
   <ItemGroup>
     <Compile Include="3rdParty\Tween.cs" />
     <Compile Include="Actions.cs" />
+    <Compile Include="Audio\Audio.cs" />
     <Compile Include="Components\CardPlaceholder.cs" />
     <Compile Include="Components\CardControl.cs" />
     <Compile Include="Components\PlayingCard.cs" />

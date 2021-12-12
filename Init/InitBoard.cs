@@ -15,8 +15,9 @@ namespace CardGame
 		public static CardGame Init(GameObject cardGameObject)
 		{
 			CardGame cardGame = ComponentUtils.GetOrCreateComponent<CardGame>(cardGameObject);
+			
 
-            if(!cardGame.boardInitialized)
+			if (!cardGame.boardInitialized)
             {
                 cardGame.cardPositions = new int[13, 52];
                 cardGame.playingCards = new PlayingCard[52];

@@ -62,7 +62,7 @@ namespace CardGame
 		public static IEnumerator MoveTo(PlayingCard playingCard, Vector3 targetPosition, float speed, float waitTime)
 		{
 			yield return new WaitForSeconds(waitTime);
-
+			//AudioMain.playClip("cardslide7");
 			System.Action<ITween<Vector3>> updateMovePos = (t) =>
 			{
 				playingCard.cardTransform.localPosition = t.CurrentValue;
@@ -120,8 +120,8 @@ namespace CardGame
 		{
 			yield return new WaitForSeconds(waitTime);
 			float endAngle = 270f;
-
-			if(cardObject.cardIsUncovered)
+			AudioMain.playClip("cardplace2");
+			if (cardObject.cardIsUncovered)
 			{
 				endAngle = 90f;
 				cardObject.cardIsUncovered = false;

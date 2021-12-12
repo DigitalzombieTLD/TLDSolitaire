@@ -43,6 +43,7 @@ namespace CardGame
 						if (hitObjectName == "Playmat")
 						{
 							MelonCoroutines.Start(Actions.shakeMat(Vars.currentGame));
+							AudioMain.playClip("cardshove4");
 						}
 
 						if (!Vars.cardInHand)
@@ -55,18 +56,20 @@ namespace CardGame
 								GameLogic.dealFromStack(Vars.currentGame);
 								CardMove.updateAllPhysicalPosition(Vars.currentGame, 1f, 0.7f);
 								MelonCoroutines.Start(CardMove.turnAllCards(Vars.currentGame, 2.5f, 0.5f));
-
+								AudioMain.playClip("cardfanmp3");
 
 								Vars.currentGame.stackInitialized = true;
 							}
 							else if (hitObjectName == "controlLeaveGame")
 							{
+								AudioMain.playClip("chipshandle1");
 								Actions.ExitGameView(Vars.currentGame);
 							}
 							else if (hitObjectName == "controlStowCards")
 							{
+								AudioMain.playClip("cardopenpackage2");
 								Actions.ExitGameView(Vars.currentGame);
-
+								
 								GameManager.GetPlayerManagerComponent().ProcessPickupItemInteraction(Vars.currentGameObject.GetComponent<GearItem>(), false, false);
 							}
 							else if (hitObjectName == "INVpositionStack")
