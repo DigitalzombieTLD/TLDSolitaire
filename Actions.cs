@@ -96,7 +96,9 @@ namespace CardGame
             GameManager.GetVpFPSCamera().transform.localPosition = GameManager.GetVpFPSCamera().PositionOffset;
             GameManager.GetVpFPSCamera().SetAngle(cardGame.dummyCamera.transform.rotation.eulerAngles.y, cardGame.dummyCamera.transform.rotation.eulerAngles.x);            
             GameManager.GetVpFPSCamera().SetPitchLimit(new Vector2(-90,90));
-            GameManager.GetVpFPSCamera().SetYawLimit(cardGame.dummyCamera.transform.rotation, new Vector2(-179, 179));
+			GameManager.GetVpFPSCamera().SetFOVFromOptions(40);
+
+			GameManager.GetVpFPSCamera().SetYawLimit(cardGame.dummyCamera.transform.rotation, new Vector2(-179, 179));
             GameManager.GetVpFPSCamera().LockRotationLimit();
 
 			// Activate controlChips / buttons
@@ -132,7 +134,7 @@ namespace CardGame
             GameManager.GetVpFPSPlayer().transform.position = m_StartPlayerPosition;
             GameManager.GetVpFPSCamera().transform.localPosition = GameManager.GetVpFPSCamera().PositionOffset;
 			GameManager.GetVpFPSCamera().SetAngle(m_StartAngleY, m_StartAngleX);
-
+			GameManager.GetVpFPSCamera().SetFOVFromOptions(m_StartCameraFOV);
 			GameManager.GetVpFPSCamera().UpdateCameraRotation();
             GameManager.GetPlayerManagerComponent().StickPlayerToGround();
 
