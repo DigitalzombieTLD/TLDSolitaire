@@ -1,4 +1,4 @@
-The Long Dark - TLD Solitaire mod - v0.8.5 by Digitalzombie
+The Long Dark - TLD Solitaire mod - v0.9.1 by Digitalzombie
 ===========================================================
 
 How to install:
@@ -43,7 +43,7 @@ How to use:
 (Second from the top left) -> Leave the locked position, playing mat stays where it is
 (Top right) -> Pick up everything and place it into the inventory
 
-- If you get bored, hit Numpad0 while playing
+- Check out the settings menu
 
 - Position of cards will not be saved in your savegame
 
@@ -54,7 +54,7 @@ BUGS ARE TO BE EXPECTED!!!
 ===========================
 
 Keep yourself up to date on the progress on:
-https://www.youtube.com/channel/UCYRu_uDOzozbXIXKGrznHxQ
+https://www.youtube.com/c/DigitalzombieDev
 
 Or on the TLD reddit:
 https://www.reddit.com/r/thelongdark/
@@ -67,5 +67,11 @@ https://discord.gg/AqpW9TjUfr
 
 Changelog:
 ==========
+0.9.1 
+- Fixed dumb mistake in the game logic
+- Changed *explosion* sound
+- Added settings menu with volume slider
+- Card objects are now disabled while moving playing mat around. Hugely better performance
+
 0.8.5 - FOV hotfix
 0.8 - First release
