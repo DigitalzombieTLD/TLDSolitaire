@@ -176,18 +176,10 @@ namespace CardGame
 					}
 				}
 
-				if (InputManager.GetKeyDown(InputManager.m_CurrentContext, KeyCode.Keypad0))
+				if (InputManager.GetKeyDown(InputManager.m_CurrentContext, Settings.options.sneezeButton))
 				{
-					MelonLogger.Msg("*BOOM*");
+					MelonLogger.Msg("*ACHOO*");
 					MelonCoroutines.Start(Actions.explode(Vars.currentGame));
-				}
-
-				if (InputManager.GetKeyDown(InputManager.m_CurrentContext, KeyCode.Keypad1))
-				{
-					MelonLogger.Msg("*RESTACK*");
-					
-					//MelonCoroutines.Start(Actions.drawCardFromStack(Vars.currentGame, 0.8f, 1f, true));
-					Actions.reStack(Vars.currentGame, 0f, 0.2f);
 				}				
 			}
 		}

@@ -56,7 +56,7 @@ namespace CardGame
 			{
 				if(cardInHand.cardSymbol == "Club") // Black
 				{
-					if(targetCard.cardSymbol == "Spades")
+					if(targetCard.cardSymbol == "Spades" || targetCard.cardSymbol == "Club")
 					{
 						return false;
 					}
@@ -64,7 +64,7 @@ namespace CardGame
 				}
 				else if (cardInHand.cardSymbol == "Diamond") // Red
 				{
-					if (targetCard.cardSymbol == "Heart")
+					if (targetCard.cardSymbol == "Heart" || targetCard.cardSymbol == "Diamond")
 					{
 						return false;
 					}
@@ -72,7 +72,7 @@ namespace CardGame
 				}
 				else if (cardInHand.cardSymbol == "Spades") // Black
 				{
-					if (targetCard.cardSymbol == "Club")
+					if (targetCard.cardSymbol == "Club" || targetCard.cardSymbol == "Spades")
 					{
 						return false;
 					}
@@ -80,7 +80,7 @@ namespace CardGame
 				}
 				else if (cardInHand.cardSymbol == "Heart") // Red
 				{
-					if (targetCard.cardSymbol == "Diamond")
+					if (targetCard.cardSymbol == "Diamond" || targetCard.cardSymbol == "Heart")
 					{
 						return false;
 					}

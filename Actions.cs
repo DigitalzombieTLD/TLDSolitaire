@@ -46,7 +46,10 @@ namespace CardGame
 
 		public static IEnumerator explode(CardGame cardGame)
 		{
-			AudioMain.playClip("whoosh");
+			if (!Settings.options.disableSneeze)
+			{
+				AudioMain.playClip("sneeze");
+			}
 
 			if (cardGame)
 			{

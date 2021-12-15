@@ -31,6 +31,7 @@ namespace CardGame
 				if (playerListener == null)
 				{
 					playerListener = mainCam.gameObject.AddComponent<AudioListener>();
+					AudioListener.volume = Settings.options.cardGameVolume;
 				}
 
 				if (playerSource == null)

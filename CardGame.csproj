@@ -59,6 +59,10 @@
     <Reference Include="ModComponent">
       <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\Mods\ModComponent.dll</HintPath>
     </Reference>
+    <Reference Include="ModSettings, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Games\Steam\steamapps\common\TheLongDark\Mods\ModSettings.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,6 +100,7 @@
     <Compile Include="3rdParty\Tween.cs" />
     <Compile Include="Actions.cs" />
     <Compile Include="Audio\Audio.cs" />
+    <Compile Include="CardGameSettings.cs" />
     <Compile Include="Components\CardPlaceholder.cs" />
     <Compile Include="Components\CardControl.cs" />
     <Compile Include="Components\PlayingCard.cs" />

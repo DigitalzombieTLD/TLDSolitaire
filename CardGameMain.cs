@@ -8,6 +8,7 @@ using System.Globalization;
 using UnhollowerRuntimeLib;
 using ModComponent.Mapper;
 using DigitalRuby.Tween;
+using ModSettings;
 
 namespace CardGame
 {
@@ -22,6 +23,8 @@ namespace CardGame
 			ClassInjector.RegisterTypeInIl2Cpp<PlayingCard>();
 			ClassInjector.RegisterTypeInIl2Cpp<TweenFactory>();
 
+			Settings.OnLoad();
+			
 			cardAudioBundle = AssetBundle.LoadFromFile("Mods\\cardaudio.unity3d");	
 			UnityEngine.Object.DontDestroyOnLoad(cardAudioBundle);
 		}

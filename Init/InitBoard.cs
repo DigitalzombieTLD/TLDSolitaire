@@ -14,8 +14,7 @@ namespace CardGame
 	{
 		public static CardGame Init(GameObject cardGameObject)
 		{
-			CardGame cardGame = ComponentUtils.GetOrCreateComponent<CardGame>(cardGameObject);
-			
+			CardGame cardGame = ComponentUtils.GetOrCreateComponent<CardGame>(cardGameObject);			
 
 			if (!cardGame.boardInitialized)
             {
